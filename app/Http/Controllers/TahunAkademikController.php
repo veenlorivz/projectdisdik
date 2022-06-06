@@ -15,7 +15,7 @@ class TahunAkademikController extends Controller
     public function index()
     {
         //
-        return '<h1>Hello Tahun Akademik</h1>';
+        return view('admin.tahunakademik.index');
     }
 
     /**
