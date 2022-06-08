@@ -15,7 +15,7 @@
                     <h4>Tahun Akademik</h4>
                 </div>
                 <div class="card-body">
-                    {{-- <a href="{{ route('tahunakademik.create') }}" class="btn btn-primary mb-3">Tambah Tahun Akademik</a> --}}
+                    <a href="{{ route('tahun-akademik.create') }}" class="btn btn-primary mb-3">Tambah Tahun Akademik</a>
                     <div class="table-responsive">
                         <table class="table table-bordered table-md">
                             <thead>
@@ -27,7 +27,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-
+                                @foreach ($tahunakademik as $item)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->tahun_akademik }}</td>
+                                        <td>
+                                            @if ($item->aktif == 1)
+                                                <span class="badge badge-success">Aktif</span>
+                                            @else
+                                                <span class="badge badge-danger">Tidak Aktif</span>
+                                            @endif
                             </tbody>
                         </table>
                     </div>

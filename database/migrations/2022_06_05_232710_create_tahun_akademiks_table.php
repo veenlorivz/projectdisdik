@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('tahun_akademiks', function (Blueprint $table) {
             $table->id();
+            $table->string('namatahunakademik', 100)->nullable();
+            $table->string('semester', 100)->nullable();
             $table->timestamps();
         });
     }
