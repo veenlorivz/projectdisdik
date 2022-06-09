@@ -26,7 +26,7 @@ class TahunAkademikController extends Controller
      */
     public function create()
     {
-        return view('admin.dataindustri.create');
+        return view('admin.tahunakademik.create');
     }
 
     /**
