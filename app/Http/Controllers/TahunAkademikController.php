@@ -15,7 +15,8 @@ class TahunAkademikController extends Controller
     public function index()
     {
         //
-        return view('admin.tahunakademik.index');
+        $tahunAkademik = TahunAkademik::all();
+        return view('admin.tahunakademik.index', compact('tahunAkademik'));
     }
 
     /**
@@ -25,7 +26,7 @@ class TahunAkademikController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tahunakademik.create');
     }
 
     /**
@@ -36,7 +37,18 @@ class TahunAkademikController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'namatahunakademik' => 'required',
+            'semester' => 'required',
+        ]);
+
+        $input = $request->all();
+        $tahunAkademik = TahunAkademik::create($input);
+        if ($tahunAkademik) {
+            return redirect()->route('tahun-akademik.index')->with('success', 'Data berhasil ditambahkan');
+        } else{
+            return redirect()->back()->with('errors', 'Data gagal ditambahkan');
+        }
     }
 
     /**
