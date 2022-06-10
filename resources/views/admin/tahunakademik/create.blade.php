@@ -6,6 +6,17 @@
 
 @section('content')
     <section class="section">
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+
+        @endif
         <div class="section-header">
             <h1>Tahun Akademik</h1>
             <div class="section-header-breadcrumb">
@@ -22,10 +33,10 @@
                 <div class="card-body">
                     <form action="{{ route('tahun-akademik.store') }}" method="post">
                         @csrf
+                        @method('POST')
                         <div class="form-group">
                             <label for="tahun_akademik">Tahun Akademik</label>
-                            <input type="text" class="form-control" id="tahun_akademik" name="tahun_akademik"
-                                placeholder="Tahun Akademik">
+                            <input type="text" name="namatahunakademik" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="semester">Semester</label>

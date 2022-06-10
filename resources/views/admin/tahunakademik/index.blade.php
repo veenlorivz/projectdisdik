@@ -6,6 +6,11 @@
 
 @section('content')
     <section class="section">
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="section-header">
             <h1>Tahun Akademik</h1>
         </div>
@@ -27,13 +32,18 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($tahunAkademik as $item)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->namatahunakademik }}</td>
+                                        <td>{{ $item->semester }}</td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-warning"><i class="fas fa-edit"></i></a>
+                                            <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
 
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
 
                             </tbody>
                         </table>
