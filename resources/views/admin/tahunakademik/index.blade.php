@@ -38,7 +38,8 @@
                                         <td>{{ $item->namatahunakademik }}</td>
                                         <td>{{ $item->semester }}</td>
                                         <td>
-                                            <a href="#" class="btn btn-outline-warning"><i class="fas fa-edit"></i></a>
+                                            <a href="{{ route('tahun-akademik.edit', $item->id) }}"
+                                                class="btn btn-outline-warning"><i class="fas fa-edit"></i></a>
                                             <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                                         </td>
                                     </tr>
