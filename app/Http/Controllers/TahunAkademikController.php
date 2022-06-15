@@ -68,9 +68,10 @@ class TahunAkademikController extends Controller
      * @param  \App\Models\TahunAkademik  $tahunAkademik
      * @return \Illuminate\Http\Response
      */
-    public function edit(TahunAkademik $tahunAkademik)
+    public function edit($id)
     {
-        //
+        $tahunAkademik = TahunAkademik::findOrfail($id);
+        return view('admin.tahunakademik.edit', compact('tahunAkademik'));
     }
 
     /**
