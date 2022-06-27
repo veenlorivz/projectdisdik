@@ -90,9 +90,13 @@ class TahunAkademikController extends Controller
 
         //input
         $input = $request->all();
-        TahunAkademik::create($input);
-        
+        $tahunSave = TahunAkademik::create($input);
 
+        if ($tahunSave) {
+            return redirect()->route('tahun-akademik.index')->with('success', 'Data berhasil diubah');
+        } else {
+            return redirect()->back()->with('errors', 'Data gagal diubah');
+        }
     }
 
     /**
