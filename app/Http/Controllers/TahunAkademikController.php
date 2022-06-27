@@ -46,7 +46,7 @@ class TahunAkademikController extends Controller
         $tahunAkademik = TahunAkademik::create($input);
         if ($tahunAkademik) {
             return redirect()->route('tahun-akademik.index')->with('success', 'Data berhasil ditambahkan');
-        } else{
+        } else {
             return redirect()->back()->with('errors', 'Data gagal ditambahkan');
         }
     }
@@ -81,9 +81,18 @@ class TahunAkademikController extends Controller
      * @param  \App\Models\TahunAkademik  $tahunAkademik
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TahunAkademik $tahunAkademik)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'namatahunakademik' => 'required',
+            'semester' => 'required'
+        ]);
+
+        //input
+        $input = $request->all();
+        TahunAkademik::create($input);
+        
+
     }
 
     /**
