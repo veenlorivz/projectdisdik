@@ -36,7 +36,20 @@ class JurusanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validate
+        $this->validate($request, [
+            'nama' => 'required',
+            'keterangan' => 'required',
+        ]);
+        //store
+        $input = $request->all();
+        $save = Jurusan::create($input);
+        //redirect
+        if ($save) {
+            return redirect()->route('jurusan.index')->with('success', 'Data berhasil ditambahkan');
+        } else {
+            return redirect()->back()->with('error', 'Data gagal ditambahkan');
+        }
     }
 
     /**
@@ -56,9 +69,11 @@ class JurusanController extends Controller
      * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Jurusan $jurusan)
+    public function edit($id)
     {
-        //
+        //id jurusan
+        $jurusan = Jurusan::find($id);
+        return view('admin.jurusan.edit', compact('jurusan'));
     }
 
     /**
@@ -68,9 +83,22 @@ class JurusanController extends Controller
      * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Jurusan $jurusan)
+    public function update(Request $request, $id)
     {
-        //
+        //validate
+        $this->validate($request, [
+            'nama' => 'required',
+            'keterangan' => 'required',
+        ]);
+        //update
+        $input = $request->all();
+        $update = Jurusan::find($id)->update($input);
+        //redirect
+        if ($update) {
+            return redirect()->route('jurusan.index')->with('success', 'Data berhasil diubah');
+        } else {
+            return redirect()->back()->with('error', 'Data gagal diubah');
+        }
     }
 
     /**
@@ -79,8 +107,14 @@ class JurusanController extends Controller
      * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Jurusan $jurusan)
+    public function destroy($id)
     {
-        //
+        $jurusan = Jurusan::find($id);
+        $delete = $jurusan->delete();
+        if ($delete) {
+            return redirect()->route('jurusan.index')->with('success', 'Data berhasil dihapus');
+        } else {
+            return redirect()->back()->with('error', 'Data gagal dihapus');
+        }
     }
 }

@@ -21,7 +21,7 @@
         <div class="section-body">
             <div class="card">
                 <div class="card-body">
-                    <form action="#" method="post">
+                    <form action="{{ route('jurusan.store') }}" method="post">
                         @csrf
                         @method('POST')
                         <div class="form-group">
