@@ -12,7 +12,7 @@
             </div>
         @endif
         <div class="section-header">
-            <h1>Jurusan</h1>
+            <h1>Data Jurusan</h1>
         </div>
         <div class="section-body">
             <div class="card">
@@ -20,7 +20,7 @@
                     <h4>Data Jurusan</h4>
                 </div>
                 <div class="card-body">
-                    <a href="#" class="btn btn-primary mb-3">Tambah Jurusan</a>
+                    <a href="{{ route('jurusan.create') }}" class="btn btn-primary mb-3">Tambah Jurusan</a>
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
