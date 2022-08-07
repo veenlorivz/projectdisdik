@@ -19,7 +19,7 @@
                 <li><a class="nav-link" href="{{ route('tahun-akademik.index') }}">Tahun Akademik</a></li>
                 <li><a class="nav-link" href="#">Sekolah PK </a>
                 </li>
-                <li><a class="nav-link" href="#">Jurusan</a></li>
+                <li><a class="nav-link" href="{{ route('jurusan.index') }}">Jurusan</a></li>
             </ul>
         </li>
         <li class="active"><a class="nav-link" href="blank.html"><i class="far fa-square"></i>
