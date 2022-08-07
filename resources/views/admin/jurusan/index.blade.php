@@ -36,7 +36,12 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $jurusan->nama }}</td>
                                     <td>{{ $jurusan->keterangan }}</td>
-                                    <td>#</td>
+                                    <td>
+                                        <a href="{{ route('jurusan.edit', $jurusan->id) }}"
+                                            class="btn btn-outline-warning"><i class="fas fa-edit"></i></a>
+                                        <a href="{{ route('jurusan.destroy', $jurusan->id) }}" class="btn btn-danger"><i
+                                                class="fas fa-trash"></i></a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </table>
