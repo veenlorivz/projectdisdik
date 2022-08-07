@@ -88,11 +88,14 @@ class TahunAkademikController extends Controller
             'semester' => 'required'
         ]);
 
-        //input
-        $input = $request->all();
-        $tahunSave = TahunAkademik::create($input);
+        //udpate
+        // $input = $request->all();
+        // $tahunSave = TahunAkademik::create($input);
+        $tahunAkademik = TahunAkademik::findOrfail($id);
+        $tahunAkademik->update($request->all());
 
-        if ($tahunSave) {
+
+        if ($tahunAkademik) {
             return redirect()->route('tahun-akademik.index')->with('success', 'Data berhasil diubah');
         } else {
             return redirect()->back()->with('errors', 'Data gagal diubah');
@@ -105,8 +108,11 @@ class TahunAkademikController extends Controller
      * @param  \App\Models\TahunAkademik  $tahunAkademik
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TahunAkademik $tahunAkademik)
+    public function destroy($id)
     {
         //
+        $tahunAkademik = TahunAkademik::findOrfail($id);
+        $tahunAkademik->delete();
+        return redirect()->route('tahun-akademik.index')->with('success', 'Data berhasil dihapus');
     }
 }
