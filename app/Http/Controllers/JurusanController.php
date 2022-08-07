@@ -14,7 +14,8 @@ class JurusanController extends Controller
      */
     public function index()
     {
-        //
+        $jurusans = Jurusan::all();
+        return view('admin.jurusan.index', compact('jurusans'));
     }
 
     /**
@@ -24,7 +25,7 @@ class JurusanController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.jurusan.create');
     }
 
     /**
