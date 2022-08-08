@@ -3,6 +3,7 @@
 use App\Http\Controllers\TahunAkademikController;
 use App\Http\Controllers\IndustriController;
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\WilayahDKIController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,9 @@ Route::prefix('admin')->group(function () {
     Route::get('jurusan-edit/{id}', [JurusanController::class, 'edit'])->name('jurusan.edit');
     Route::put('jurusan-update/{id}', [JurusanController::class, 'update'])->name('jurusan.update');
     Route::get('jurusan-destroy/{id}', [JurusanController::class, 'destroy'])->name('jurusan.destroy');
+
+    //sekolah PK
+    Route::get('sekolah-pk', [SchoolController::class, 'index'])->name('sekolah.index');
 
     //industri module
     Route::resource('industri', IndustriController::class);
