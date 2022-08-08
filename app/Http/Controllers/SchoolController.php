@@ -24,7 +24,7 @@ class SchoolController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.datasekolah.create');
     }
 
     /**

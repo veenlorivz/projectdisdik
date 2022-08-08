@@ -1,6 +1,6 @@
 <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-        <a href="index.html">Masparta</a>
+        <a href="index.html"><img height="30" width="30" src="{{ asset('admin/assets/img/logo.png') }}" alt="" srcset=""> Masparta</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
         <a href="index.html">MP</a>
