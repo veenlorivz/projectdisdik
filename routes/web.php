@@ -10,7 +10,7 @@ Route::prefix('admin')->group(function () {
     //wilayah
     Route::get('wilayah-dki', [WilayahDKIController::class, 'index'])->name('wilayah.index');
     Route::get('wilayah-dki-create', [WilayahDKIController::class, 'create'])->name('wilayah.create');
-
+    Route::post('wilayah-dki-post', [WilayahDKIController::class, 'store'])->name('wilayah.store');
 
 
     Route::resource('tahun-akademik', TahunAkademikController::class);

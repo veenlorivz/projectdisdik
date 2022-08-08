@@ -38,7 +38,22 @@ class WilayahDKIController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validate
+        $this->validate($request,[
+            'namawilayah'=>'required',
+            'descrioption'=>'required'
+        ]);
+        //input
+        $input = $request->all();
+        //save
+        $savedata = WilayahDKI::create($input);
+        //redirect
+        if ($savedata) {
+            return redirect()->route('wilayah.index')->with('success', 'Data Wilayah DKI Berhasil Ditambahkan');
+        } else {
+            return redirect()->back()->with('error', 'Data Wilayah DKI Gagal Ditambahkan');
+        }
+
     }
 
     /**
