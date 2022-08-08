@@ -39,9 +39,9 @@ class WilayahDKIController extends Controller
     public function store(Request $request)
     {
         //validate
-        $this->validate($request,[
-            'namawilayah'=>'required',
-            'descrioption'=>'required'
+        $this->validate($request, [
+            'namawilayah' => 'required',
+            'description' => 'required'
         ]);
         //input
         $input = $request->all();
@@ -49,11 +49,10 @@ class WilayahDKIController extends Controller
         $savedata = WilayahDKI::create($input);
         //redirect
         if ($savedata) {
-            return redirect()->route('wilayah.index')->with('success', 'Data Wilayah DKI Berhasil Ditambahkan');
+            return redirect()->route('wilayah.index')->with('success', 'Data Wilayah DKI' . ' ' . $request->namawilayah . ' ' . 'Berhasil Ditambahkan');
         } else {
             return redirect()->back()->with('error', 'Data Wilayah DKI Gagal Ditambahkan');
         }
-
     }
 
     /**
@@ -73,9 +72,12 @@ class WilayahDKIController extends Controller
      * @param  \App\Models\WilayahDKI  $wilayahDKI
      * @return \Illuminate\Http\Response
      */
-    public function edit(WilayahDKI $wilayahDKI)
+    public function edit($id)
     {
-        //
+        //id
+        $wilayah = WilayahDKI::findOrFail($id);
+        //return view
+        return view('admin.datawilayah.edit', compact('wilayah'));
     }
 
     /**
@@ -85,9 +87,25 @@ class WilayahDKIController extends Controller
      * @param  \App\Models\WilayahDKI  $wilayahDKI
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, WilayahDKI $wilayahDKI)
+    public function update(Request $request, $id)
     {
-        //
+        //validate
+        $this->validate($request, [
+            'namawilayah' => 'required',
+            'description' => 'required'
+        ]);
+        //id
+        $wilayah = WilayahDKI::findOrFail($id);
+        //input
+        $input = $request->all();
+        //update
+        $updatedata = $wilayah->update($input);
+        //redirect
+        if ($updatedata) {
+            return redirect()->route('wilayah.index')->with('success', 'Data Wilayah DKI' . ' ' . $request->namawilayah . ' ' . 'Berhasil Diubah');
+        } else {
+            return redirect()->back()->with('error', 'Data Wilayah DKI Gagal Diubah');
+        }
     }
 
     /**

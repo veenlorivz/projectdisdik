@@ -6,6 +6,11 @@
 
 @section('content')
     <section class="section">
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="section-header">
             <h1>Data Wilayah</h1>
         </div>
@@ -24,6 +29,7 @@
                                     <th>#</th>
                                     <th>Nama Wilayah</th>
                                     <th>Keterangan</th>
+                                    <th>Tools</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -32,6 +38,8 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->namawilayah }}</td>
                                         <td>{{ $item->description }}</td>
+                                        <td><a href="{{ route('wilayah.edit', $item->id) }}"
+                                                class="btn btn-outline-warning"><i class="fas fa-edit"></i></a></td>
                                     </tr>
                                 @endforeach
                             </tbody>

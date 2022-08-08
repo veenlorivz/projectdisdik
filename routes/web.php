@@ -11,6 +11,8 @@ Route::prefix('admin')->group(function () {
     Route::get('wilayah-dki', [WilayahDKIController::class, 'index'])->name('wilayah.index');
     Route::get('wilayah-dki-create', [WilayahDKIController::class, 'create'])->name('wilayah.create');
     Route::post('wilayah-dki-post', [WilayahDKIController::class, 'store'])->name('wilayah.store');
+    Route::get('wilayah-dki-edit/{id}', [WilayahDKIController::class, 'edit'])->name('wilayah.edit');
+    Route::put('wilayah-dki-update/{id}', [WilayahDKIController::class, 'update'])->name('wilayah.update');
 
 
     Route::resource('tahun-akademik', TahunAkademikController::class);
