@@ -16,6 +16,7 @@
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                 <span>Data Master</span></a>
             <ul class="dropdown-menu">
+                <li><a href="{{route('wilayah.index')}}" class="nav-link">Data Wilayah</a></li>
                 <li><a class="nav-link" href="{{ route('tahun-akademik.index') }}">Tahun Akademik</a></li>
                 <li><a class="nav-link" href="#">Sekolah PK </a>
                 </li>
