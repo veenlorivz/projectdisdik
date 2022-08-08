@@ -15,7 +15,7 @@
                     <h4>Data Sekolah PK</h4>
                 </div>
                 <div class="card-body">
-                    <a href="#" class="btn btn-primary mb-3">Tambah Sekolah PK</a>
+                    <a href="{{ route('sekolah.create') }}" class="btn btn-primary mb-3">Tambah Sekolah PK</a>
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>

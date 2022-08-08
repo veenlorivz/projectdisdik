@@ -29,6 +29,7 @@ Route::prefix('admin')->group(function () {
 
     //sekolah PK
     Route::get('sekolah-pk', [SchoolController::class, 'index'])->name('sekolah.index');
+    Route::get('sekolah-pk-create', [SchoolController::class, 'create'])->name('sekolah.create');
 
     //industri module
     Route::resource('industri', IndustriController::class);
