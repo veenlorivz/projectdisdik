@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('namasekolah')->nullable();
             $table->string('alamat')->nullable();
-            
+            $table->foreignId('wilayah_dki_id')->constraint()->onDelete('cascade');
+            $table->foreignId('tahun_akademik_id')->constraint()->onDelete('cascade');
+            $table->foreignId('jurusan_id')->constraint()->onDelete('cascade');
             $table->timestamps();
         });
     }
