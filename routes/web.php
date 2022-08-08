@@ -3,9 +3,16 @@
 use App\Http\Controllers\TahunAkademikController;
 use App\Http\Controllers\IndustriController;
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\WilayahDKIController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function () {
+    //wilayah
+    Route::get('wilayah-dki', [WilayahDKIController::class, 'index'])->name('wilayah.index');
+    Route::get('wilayah-dki-create', [WilayahDKIController::class, 'create'])->name('wilayah.create');
+
+
+
     Route::resource('tahun-akademik', TahunAkademikController::class);
     Route::get('tahun-akademik/destroy/{id}', [TahunAkademikController::class, 'destroy'])->name('tahun-akademik.destroy');
 
