@@ -30,7 +30,7 @@ Route::prefix('admin')->group(function () {
     Route::get('jurusan-destroy/{id}', [JurusanController::class, 'destroy'])->name('jurusan.destroy');
 
     //siswa module
-    Route::get('siswa', [SiswaController::class, 'index'])->name('siswa.index');
+    Route::resource("siswa", SiswaController::class);
 
     //sekolah PK
     Route::get('sekolah-pk', [SchoolController::class, 'index'])->name('sekolah.index');

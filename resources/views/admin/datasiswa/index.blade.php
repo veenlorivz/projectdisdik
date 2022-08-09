@@ -19,6 +19,7 @@
                     <a href="{{ route('sekolah.create') }}" class="btn btn-primary mb-3">Tambah Data Siswa</a>
 
                     <div class="table-responsive">
+                        <a href="{{ route('/admin/siswa/create') }}" class="btn btn-primary mb-3">Tambah Data Siswa</a>
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
