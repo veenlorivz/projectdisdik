@@ -6,7 +6,7 @@ use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\WilayahDKIController;
-use Illuminate\Routing\Route as RoutingRoute;
+use App\Http\Controllers\DokumenController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function () {
@@ -38,4 +38,8 @@ Route::prefix('admin')->group(function () {
 
     //industri module
     Route::resource('industri', IndustriController::class);
+
+    Route::group(['prefix' => 'data-dokumen'], function() {
+        Route::get('/', [DokumenController::class, 'index'])->name('datadokumen.index');
+    });
 });

@@ -41,6 +41,7 @@
 
     <!-- General JS Scripts -->
     @include('components.scripts')
+    @yield('javascript')
     <!-- Page Specific JS File -->
 </body>
 
