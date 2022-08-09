@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Industri;
+use App\Models\TracerStudi;
 use Illuminate\Http\Request;
 
-class IndustriController extends Controller
+class TracerStudiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,7 @@ class IndustriController extends Controller
      */
     public function index()
     {
-        $industri = Industri::all();
-        return view('admin.dataindustri.index', [
-            "industri" => $industri
-        ]);
+        //
     }
 
     /**
@@ -27,7 +24,7 @@ class IndustriController extends Controller
      */
     public function create()
     {
-        return view('admin.dataindustri.create');
+        //
     }
 
     /**
@@ -38,17 +35,16 @@ class IndustriController extends Controller
      */
     public function store(Request $request)
     {
-        $industri = Industri::all();
-        Industri::create($request->except(['_token']));
-        return view('admin.dataindustri.index', ['industri' => $industri]);
+        //
     }
+
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Industri  $industri
+     * @param  \App\Models\TracerStudi  $tracerStudi
      * @return \Illuminate\Http\Response
      */
-    public function show(Industri $industri)
+    public function show(TracerStudi $tracerStudi)
     {
         //
     }
@@ -56,23 +52,22 @@ class IndustriController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Industri  $industri
+     * @param  \App\Models\TracerStudi  $tracerStudi
      * @return \Illuminate\Http\Response
      */
-    public function edit(Industri $industri)
+    public function edit(TracerStudi $tracerStudi)
     {
-        $industri = Industri::find($id);
-        return view('admin.dataindustri.edit', ['industri' => $industri]);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Industri  $industri
+     * @param  \App\Models\TracerStudi  $tracerStudi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Industri $industri)
+    public function update(Request $request, TracerStudi $tracerStudi)
     {
         //
     }
@@ -80,10 +75,10 @@ class IndustriController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Industri  $industri
+     * @param  \App\Models\TracerStudi  $tracerStudi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Industri $industri)
+    public function destroy(TracerStudi $tracerStudi)
     {
         //
     }
