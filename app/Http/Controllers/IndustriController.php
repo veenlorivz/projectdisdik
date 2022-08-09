@@ -59,10 +59,9 @@ class IndustriController extends Controller
      * @param  \App\Models\Industri  $industri
      * @return \Illuminate\Http\Response
      */
-    public function edit(Industri $industri)
+    public function edit($id)
     {
-        $industri = Industri::find($id);
-        return view('admin.dataindustri.edit', ['industri' => $industri]);
+        return view('admin.dataindustri.edit');
     }
 
     /**
@@ -72,9 +71,14 @@ class IndustriController extends Controller
      * @param  \App\Models\Industri  $industri
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Industri $industri)
+    public function update(Request $request, $id)
     {
-        //
+        $industri  = Industri::find($id);
+        $industri->nama = $request->nama;
+        $industri->alamat = $request->alamat;
+        $industri->no_telp = $request->no_telp;
+        $industri->update();
+        return view('admin.dataindustri.index', ['industri' => Industri::all()]);
     }
 
     /**
@@ -85,6 +89,7 @@ class IndustriController extends Controller
      */
     public function destroy(Industri $industri)
     {
-        //
+        $industri = Industri::find($industri);
+        $industri->delete();
     }
 }
