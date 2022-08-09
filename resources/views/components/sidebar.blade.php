@@ -20,14 +20,34 @@
                 <li><a href="{{ route('wilayah.index') }}" class="nav-link">Data Wilayah</a></li>
                 <li><a class="nav-link" href="{{ route('jurusan.index') }}">Jurusan</a></li>
                 <li><a class="nav-link" href="{{ route('tahun-akademik.index') }}">Tahun Akademik</a></li>
+                <li><a href="{{ route('siswa.index') }}" class="nav-link">Data Siswa</a></li>
                 <li><a class="nav-link" href="{{ route('sekolah.index') }}">Sekolah PK </a></li>
                 <li><a class="nav-link" href="{{ route('industri.index') }}">Industri</a></li>
             </ul>
         </li>
-        <li class="active"><a class="nav-link" href="#"><i class="far fa-square"></i>
-                <span>Data Industri</span></a></li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <span>Data Dokumen</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="nav-link">Dokumen MoU</a></li>
+                <li><a class="nav-link" href="#">Kurikulum Industri </a></li>
+                <li><a class="nav-link" href="#">Kelas Industri</a></li>
+                <li><a class="nav-link" href="#">Magang Guru Industri</a></li>
+                <li><a class="nav-link" href="#">Guru Tamu Industri </a></li>
+                <li><a href="#" class="nav-link">Uji Sertifikasi Kompetensi</a></li>
+                <li><a href="#" class="nav-link">Perekrutan Tamatan</a></li>
 
-
+            </ul>
+        </li>
+        <li class="menu-header">Data Tracer Studi</li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <span>Data Tracer Studi</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="nav-link">Tracer Studi</a></li>
+                <li><a href="#" class="nav-link">Beasiswa Industri</a></li>
+            </ul>
+        </li>
     </ul>
 
     <div class="mt-4 mb-4 p-3 hide-sidebar-mini">

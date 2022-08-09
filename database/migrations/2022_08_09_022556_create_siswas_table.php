@@ -13,14 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('schools', function (Blueprint $table) {
+        Schema::create('siswas', function (Blueprint $table) {
             $table->id();
-            $table->string('namasekolah')->nullable();
-            $table->string('alamat')->nullable();
-            $table->foreignId('wilayah_dki_id')->constraint()->onDelete('cascade');
-            $table->unsignedBigInteger('tahun_akademik_id');
+            $table->string('nisn', 100)->nullable();
+            $table->string('namasiswa', 100)->nullable();
+            $table->text('alamat')->nullable();
+            $table->enum('jenis_kelamin', ['laki-laki', 'perempuan'])->nullable();
+            $table->string('ttl', 100)->nullable();
+            $table->unsignedBigInteger('sekolah_id');
             $table->unsignedBigInteger('jurusan_id');
-            $table->foreign('tahun_akademik_id')->references('id')->on('tahun_akademiks')->onDelete('cascade');
+            $table->foreign('sekolah_id')->references('id')->on('schools')->onusersDelete('cascade');
             $table->foreign('jurusan_id')->references('id')->on('jurusans')->onDelete('cascade');
             $table->timestamps();
         });
@@ -33,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('schools');
+        Schema::dropIfExists('siswas');
     }
 };
