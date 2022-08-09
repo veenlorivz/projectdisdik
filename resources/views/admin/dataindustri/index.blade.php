@@ -20,9 +20,6 @@
                     <div class="card-body">
 
                         <a href="{{ route('industri.create') }}" class="btn btn-primary mb-3">Tambah Data Industri</a>
-
-                        <a href="{{ route('sekolah.create') }}" class="btn btn-primary mb-3">Tambah Data Industri</a>
-
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <thead>
