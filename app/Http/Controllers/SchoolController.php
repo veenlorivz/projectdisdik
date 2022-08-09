@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\School;
+use App\Models\WilayahDKI;
+use App\Models\Jurusan;
+use App\Models\TahunAkademik;
 use Illuminate\Http\Request;
 
 class SchoolController extends Controller
@@ -24,7 +27,10 @@ class SchoolController extends Controller
      */
     public function create()
     {
-        return view('admin.datasekolah.create');
+        $d['wilayah'] = WilayahDKI::all();
+        $d['jurusan'] = Jurusan::all();
+        $d['tahunakademik'] = TahunAkademik::all();
+        return view('admin.datasekolah.create', $d);
     }
 
     /**
