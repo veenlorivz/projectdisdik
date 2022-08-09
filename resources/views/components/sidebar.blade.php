@@ -26,7 +26,7 @@
             </ul>
         </li>
         <li class="nav-item dropdown">
-            <a href="#" class="nav-link"><i class="fas fa-book"></i>
+            <a href="{{ route('datadokumen.index') }}" class="nav-link"><i class="fas fa-book"></i>
                 <span>Data Dokumen</span></a>
         </li>
     </ul>
