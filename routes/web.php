@@ -41,5 +41,6 @@ Route::prefix('admin')->group(function () {
 
     Route::group(['prefix' => 'data-dokumen'], function() {
         Route::get('/', [DokumenController::class, 'index'])->name('datadokumen.index');
+        Route::get('/task/{id}', [DokumenController::class, 'show'])->name('datadokumen.show');
     });
 });

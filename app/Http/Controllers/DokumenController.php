@@ -45,7 +45,7 @@ class DokumenController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('admin.datadokumen.show');
     }
 
     /**
