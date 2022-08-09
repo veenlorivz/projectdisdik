@@ -23,6 +23,14 @@
                 <li><a href="{{ route('siswa.index') }}" class="nav-link">Data Siswa</a></li>
                 <li><a class="nav-link" href="{{ route('sekolah.index') }}">Sekolah PK </a></li>
                 <li><a class="nav-link" href="{{ route('industri.index') }}">Industri</a></li>
+
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="{{ route('datadokumen.index') }}" class="nav-link"><i class="fas fa-book"></i>
+                <span>Data Dokumen</span></a>
+        </li>
+
             </ul>
         </li>
         <li class="nav-item dropdown">
@@ -40,6 +48,7 @@
                 <li><a href="#" class="nav-link">Beasiswa Lulusan</a>
             </ul>
         </li>
+
     </ul>
 
     <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
