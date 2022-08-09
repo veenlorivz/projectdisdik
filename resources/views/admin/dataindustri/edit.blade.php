@@ -15,7 +15,7 @@
                     <h4>Edit Data Industri</h4>
                 </div>
                 <div class="card-body">
-                    <form action="/admin/industri/" method="post">
+                    <form action="/admin/industri/{{ $industri->id }}" method="post">
                         @csrf
                         @method('PUT')
                         <div class="form-group">

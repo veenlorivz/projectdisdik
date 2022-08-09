@@ -72,11 +72,14 @@ class IndustriController extends Controller
      * @param  \App\Models\Industri  $industri
      * @return \Illuminate\Http\Response
      */
-    public function update($id, Request $request)
+    public function update(Request $request, $id)
     {
         $industri  = Industri::find($id);
-        $industri->update($request->except(['_token']));
-        return view('admin.dataindustri.index', ['industri' => $industri]);
+        $industri->nama = $request->nama;
+        $industri->alamat = $request->alamat;
+        $industri->no_telp = $request->no_telp;
+        $industri->update();
+        return view('admin.dataindustri.index', ['industri' => Industri::all()]);
     }
 
     /**
