@@ -24,7 +24,7 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 d-inline-block">
                             <div class="card border" id="mycard-dimiss">
                                 <div class="card-header bg-primary">
                                   <h4 class="text-light">MoU dengan Industri /kelas Industri</h4>
@@ -46,7 +46,7 @@
                                 </div>
                               </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 d-inline-block">
                             <div class="card border" id="mycard-dimiss">
                                 <div class="card-header bg-primary">
                                   <h4 class="text-light">Sinkronisasi Kurikulum dengan Industri</h4>
@@ -68,7 +68,7 @@
                                 </div>
                               </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 d-inline-block">
                             <div class="card border" id="mycard-dimiss">
                                 <div class="card-header bg-primary">
                                   <h4 class="text-light">Kelas Industri Seleksi/ Perekrutan kelas Industri.</h4>
@@ -90,7 +90,7 @@
                                 </div>
                               </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 d-inline-block">
                             <div class="card border" id="mycard-dimiss">
                                 <div class="card-header bg-primary">
                                   <h4 class="text-light">Magang guru di Industri (minimal 50 jam/ semester)</h4>
@@ -112,7 +112,7 @@
                                 </div>
                               </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 d-inline-block">
                             <div class="card border" id="mycard-dimiss">
                                 <div class="card-header bg-primary">
                                   <h4 class="text-light">Guru tamu dari Industri (minimal 50 jam/ semester)</h4>
@@ -134,7 +134,7 @@
                                 </div>
                               </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 d-inline-block">
                             <div class="card border" id="mycard-dimiss">
                                 <div class="card-header bg-primary">
                                   <h4 class="text-light">Uji Sertifikasi Kompetensi yang mengacu kepada SKKNI</h4>
@@ -156,7 +156,7 @@
                                 </div>
                               </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 d-inline-block">
                             <div class="card border" id="mycard-dimiss">
                                 <div class="card-header bg-primary">
                                   <h4 class="text-light">Perekrutan Tamatan dari Industri yang melaksanakan MoU</h4>

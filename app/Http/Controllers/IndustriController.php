@@ -61,8 +61,7 @@ class IndustriController extends Controller
      */
     public function edit($id)
     {
-        $industri = Industri::find($id);
-        return view('admin.dataindustri.edit', ['industri' => $industri]);
+        return view('admin.dataindustri.edit');
     }
 
     /**
