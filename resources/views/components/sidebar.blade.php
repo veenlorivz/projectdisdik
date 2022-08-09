@@ -17,10 +17,10 @@
                 <span>Data Master</span></a>
             <ul class="dropdown-menu">
                 <li><a href="{{ route('wilayah.index') }}" class="nav-link">Data Wilayah</a></li>
-                <li><a class="nav-link" href="{{ route('tahun-akademik.index') }}">Tahun Akademik</a></li>
-                <li><a class="nav-link" href="{{ route('sekolah.index') }}">Sekolah PK </a>
-                </li>
                 <li><a class="nav-link" href="{{ route('jurusan.index') }}">Jurusan</a></li>
+                <li><a class="nav-link" href="{{ route('tahun-akademik.index') }}">Tahun Akademik</a></li>
+                <li><a class="nav-link" href="{{ route('sekolah.index') }}">Sekolah PK </a></li>
+                <li><a class="nav-link" href="{{ route('industri.index') }}">Industri</a></li>
             </ul>
         </li>
         <li class="active"><a class="nav-link" href="#"><i class="far fa-square"></i>
