@@ -14,7 +14,10 @@ class IndustriController extends Controller
      */
     public function index()
     {
-        return view('admin.dataindustri.index');
+        $industri = Industri::all();
+        return view('admin.dataindustri.index', [
+            "industri" => $industri
+        ]);
     }
 
     /**
@@ -24,7 +27,7 @@ class IndustriController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.dataindustri.create');
     }
 
     /**
@@ -35,9 +38,10 @@ class IndustriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $industri = Industri::all();
+        Industri::create($request->except(['_token']));
+        return view('admin.dataindustri.index', ['industri' => $industri]);
     }
-
     /**
      * Display the specified resource.
      *
@@ -57,7 +61,8 @@ class IndustriController extends Controller
      */
     public function edit(Industri $industri)
     {
-        //
+        $industri = Industri::find($id);
+        return view('admin.dataindustri.edit', ['industri' => $industri]);
     }
 
     /**

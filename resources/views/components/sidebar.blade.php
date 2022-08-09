@@ -29,15 +29,23 @@
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                 <span>Data Dokumen</span></a>
             <ul class="dropdown-menu">
-                <li><a href="{{ route('wilayah.index') }}" class="nav-link">Dokumen MoU</a></li>
-                <li><a class="nav-link" href="{{ route('jurusan.index') }}">Kurikulum Industri </a></li>
-                <li><a class="nav-link" href="{{ route('tahun-akademik.index') }}">Kelas Industri</a></li>
-                <li><a class="nav-link" href="{{ route('sekolah.index') }}">Magang Guru Industri</a></li>
-                <li><a class="nav-link" href="{{ route('industri.index') }}">Guru Tamu Industri </a></li>
+                <li><a href="#" class="nav-link">Dokumen MoU</a></li>
+                <li><a class="nav-link" href="#">Kurikulum Industri </a></li>
+                <li><a class="nav-link" href="#">Kelas Industri</a></li>
+                <li><a class="nav-link" href="#">Magang Guru Industri</a></li>
+                <li><a class="nav-link" href="#">Guru Tamu Industri </a></li>
                 <li><a href="#" class="nav-link">Uji Sertifikasi Kompetensi</a></li>
                 <li><a href="#" class="nav-link">Perekrutan Tamatan</a></li>
-                <li><a href="#" class="nav-link">Tracer Study</a>
-                <li><a href="#" class="nav-link">Beasiswa Lulusan</a>
+
+            </ul>
+        </li>
+        <li class="menu-header">Data Tracer Studi</li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <span>Data Tracer Studi</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="nav-link">Tracer Studi</a></li>
+                <li><a href="#" class="nav-link">Beasiswa Industri</a></li>
             </ul>
         </li>
     </ul>
