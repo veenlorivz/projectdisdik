@@ -1,6 +1,7 @@
 <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-        <a href="index.html"><img height="30" width="30" src="{{ asset('admin/assets/img/logo.png') }}" alt="" srcset=""> Masparta</a>
+        <a href="index.html"><img height="30" width="30" src="{{ asset('admin/assets/img/logo.png') }}" alt=""
+                srcset=""> Masparta</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
         <a href="index.html">MP</a>
@@ -19,6 +20,7 @@
                 <li><a href="{{ route('wilayah.index') }}" class="nav-link">Data Wilayah</a></li>
                 <li><a class="nav-link" href="{{ route('jurusan.index') }}">Jurusan</a></li>
                 <li><a class="nav-link" href="{{ route('tahun-akademik.index') }}">Tahun Akademik</a></li>
+                <li><a href="{{ route('siswa.index') }}" class="nav-link">Data Siswa</a></li>
                 <li><a class="nav-link" href="{{ route('sekolah.index') }}">Sekolah PK </a></li>
                 <li><a class="nav-link" href="{{ route('industri.index') }}">Industri</a></li>
             </ul>
