@@ -30,6 +30,25 @@
             <a href="{{ route('datadokumen.index') }}" class="nav-link"><i class="fas fa-book"></i>
                 <span>Data Dokumen</span></a>
         </li>
+
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <span>Data Dokumen</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ route('wilayah.index') }}" class="nav-link">Dokumen MoU</a></li>
+                <li><a class="nav-link" href="{{ route('jurusan.index') }}">Kurikulum Industri </a></li>
+                <li><a class="nav-link" href="{{ route('tahun-akademik.index') }}">Kelas Industri</a></li>
+                <li><a class="nav-link" href="{{ route('sekolah.index') }}">Magang Guru Industri</a></li>
+                <li><a class="nav-link" href="{{ route('industri.index') }}">Guru Tamu Industri </a></li>
+                <li><a href="#" class="nav-link">Uji Sertifikasi Kompetensi</a></li>
+                <li><a href="#" class="nav-link">Perekrutan Tamatan</a></li>
+                <li><a href="#" class="nav-link">Tracer Study</a>
+                <li><a href="#" class="nav-link">Beasiswa Lulusan</a>
+            </ul>
+        </li>
+
     </ul>
 
     <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
