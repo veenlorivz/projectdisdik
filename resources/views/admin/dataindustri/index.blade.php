@@ -25,7 +25,6 @@
                                     <th>Alamat</th>
                                     <th>No Telepon</th>
                                     <th></th>
-                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -35,6 +34,12 @@
                                         <td>{{ $i->nama }}</td>
                                         <td>{{ $i->alamat }}</td>
                                         <td>{{ $i->no_telp }}</td>
+                                        <td>
+                                            <a href="/admin/industri/{{ $i->id }}/edit/" class="btn btn-warning"><i
+                                                    class="bi bi-pen-fill"></i></a>
+                                            <a href="/admin/industri/{{ $i->id }}/destroy/" class="btn btn-danger"><i
+                                                    class="bi bi-trash2"></i></a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

@@ -59,7 +59,7 @@ class IndustriController extends Controller
      * @param  \App\Models\Industri  $industri
      * @return \Illuminate\Http\Response
      */
-    public function edit(Industri $industri)
+    public function edit($id)
     {
         $industri = Industri::find($id);
         return view('admin.dataindustri.edit', ['industri' => $industri]);
@@ -72,9 +72,11 @@ class IndustriController extends Controller
      * @param  \App\Models\Industri  $industri
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Industri $industri)
+    public function update($id, Request $request)
     {
-        //
+        $industri  = Industri::find($id);
+        $industri->update($request->except(['_token']));
+        return view('admin.dataindustri.index', ['industri' => $industri]);
     }
 
     /**
@@ -85,6 +87,7 @@ class IndustriController extends Controller
      */
     public function destroy(Industri $industri)
     {
-        //
+        $industri = Industri::find($industri);
+        $industri->delete();
     }
 }
