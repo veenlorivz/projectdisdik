@@ -6,6 +6,7 @@ use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\WilayahDKIController;
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function () {
@@ -29,7 +30,7 @@ Route::prefix('admin')->group(function () {
     Route::get('jurusan-destroy/{id}', [JurusanController::class, 'destroy'])->name('jurusan.destroy');
 
     //siswa module
-    Route::get('siswa', [SiswaController::class, 'index'])->name('siswa.index');
+    Route::resource("siswa", SiswaController::class);
 
     //sekolah PK
     Route::get('sekolah-pk', [SchoolController::class, 'index'])->name('sekolah.index');
