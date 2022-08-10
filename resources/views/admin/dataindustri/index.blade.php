@@ -43,8 +43,8 @@
                                             <td>{{ $i->alamat }}</td>
                                             <td>{{ $i->no_telp }}</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning"><i class="bi bi-pen-fill"></i></a>
-                                                <a href="#" class="btn btn-danger"><i class="bi bi-trash2"></i></a>
+                                                <a href="#" class="btn btn-warning"><i class="fas fa-pen"></i></a>
+                                                <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach

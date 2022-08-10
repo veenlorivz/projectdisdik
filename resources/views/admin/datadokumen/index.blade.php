@@ -41,7 +41,7 @@
                                         <span class="badge border border-primary text-primary rounded-3 mt-1">On Progress</span>
                                     </div>
                                     <div class="float-right">
-                                        <a href="#" class="btn btn-primary">Selesaikan</a>
+                                        <a href="{{ route('datadokumen.show', 1) }}" class="btn btn-primary">Selesaikan</a>
                                     </div>
                                 </div>
                               </div>
@@ -63,7 +63,7 @@
                                         <span class="badge border border-primary text-primary rounded-3 mt-1">On Progress</span>
                                     </div>
                                     <div class="float-right">
-                                        <a href="#" class="btn btn-primary">Selesaikan</a>
+                                        <a href="{{ route('datadokumen.show', 1) }}" class="btn btn-primary">Selesaikan</a>
                                     </div>
                                 </div>
                               </div>
@@ -85,7 +85,7 @@
                                         <span class="badge border border-primary text-primary rounded-3 mt-1">On Progress</span>
                                     </div>
                                     <div class="float-right">
-                                        <a href="#" class="btn btn-primary">Selesaikan</a>
+                                        <a href="{{ route('datadokumen.show', 1) }}" class="btn btn-primary">Selesaikan</a>
                                     </div>
                                 </div>
                               </div>
@@ -107,7 +107,7 @@
                                         <span class="badge border border-primary text-primary rounded-3 mt-1">On Progress</span>
                                     </div>
                                     <div class="float-right">
-                                        <a href="#" class="btn btn-primary">Selesaikan</a>
+                                        <a href="{{ route('datadokumen.show', 1) }}" class="btn btn-primary">Selesaikan</a>
                                     </div>
                                 </div>
                               </div>
@@ -129,7 +129,7 @@
                                         <span class="badge border border-primary text-primary rounded-3 mt-1">On Progress</span>
                                     </div>
                                     <div class="float-right">
-                                        <a href="#" class="btn btn-primary">Selesaikan</a>
+                                        <a href="{{ route('datadokumen.show', 1) }}" class="btn btn-primary">Selesaikan</a>
                                     </div>
                                 </div>
                               </div>
@@ -151,7 +151,7 @@
                                         <span class="badge border border-primary text-primary rounded-3 mt-1">On Progress</span>
                                     </div>
                                     <div class="float-right">
-                                        <a href="#" class="btn btn-primary">Selesaikan</a>
+                                        <a href="{{ route('datadokumen.show', 1) }}" class="btn btn-primary">Selesaikan</a>
                                     </div>
                                 </div>
                               </div>
@@ -173,7 +173,7 @@
                                         <span class="badge border border-primary text-primary rounded-3 mt-1">On Progress</span>
                                     </div>
                                     <div class="float-right">
-                                        <a href="#" class="btn btn-primary">Selesaikan</a>
+                                        <a href="{{ route('datadokumen.show', 1) }}" class="btn btn-primary">Selesaikan</a>
                                     </div>
                                 </div>
                               </div>
