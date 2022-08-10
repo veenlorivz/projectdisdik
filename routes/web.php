@@ -39,7 +39,7 @@ Route::prefix('admin')->group(function () {
     //industri module
     Route::resource('industri', IndustriController::class);
 
-    Route::group(['prefix' => 'data-dokumen'], function() {
+    Route::group(['prefix' => 'data-dokumen'], function () {
         Route::get('/', [DokumenController::class, 'index'])->name('datadokumen.index');
         Route::get('/task/{id}', [DokumenController::class, 'show'])->name('datadokumen.show');
     });
