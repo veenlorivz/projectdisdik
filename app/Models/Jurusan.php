@@ -13,4 +13,8 @@ class Jurusan extends Model
     public function school(){
         $this->hasMany(School::class);
     }
+
+    public function siswa(){
+        return $this->hasMany(Siswa::class);
+    }
 }

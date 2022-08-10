@@ -76,34 +76,47 @@ class SchoolController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\School  $school
      * @return \Illuminate\Http\Response
      */
-    public function edit(School $school)
+    public function edit($id)
     {
-        //
+        $school = School::find($id);
+        return view("admin.datasekolah.edit", [
+            "jurusan" => Jurusan::all(),
+            "wilayah" => WilayahDKI::all(),
+            "tahunakademik" => TahunAkademik::all(),
+            "school" => $school
+        ]);  
     }
-
+    
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\School  $school
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, School $school)
+    public function update(Request $request, $id)
     {
         //
+        $school = School::find($id);
+        $school->namasekolah = $request->namasekolah;
+        $school->alamat = $request->alamat;
+        $school->jurusan_id = $request->jurusan_id;
+        $school->wilayah_dki_id = $request->wilayah_dki_id;
+        $school->tahun_akademik_id = $request->tahun_akademik_id;
+        $school->update();
+
+        return redirect("/admin/sekolah-pk");
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\School  $school
      * @return \Illuminate\Http\Response
      */
-    public function destroy(School $school)
+    public function destroy($id)
     {
-        //
+        School::destroy($id);
+        return redirect("/admin/sekolah-pk");
     }
 }

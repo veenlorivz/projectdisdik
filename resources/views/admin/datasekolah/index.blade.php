@@ -47,8 +47,16 @@
                                                 <td>{{ $school->jurusan->nama }}</td>
                                                 <td>{{ $school->tahunAkademik->namatahunakademik }}</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-warning"><i class="bi bi-pen-fill"></i></a>
-                                                    <a href="#" class="btn btn-danger"><i class="bi bi-trash2"></i></a>
+                                                <div class="d-flex">
+                                                    <a href="/admin/sekolah-pk/{{ $school->id }}/edit"
+                                                        class="btn btn-warning"><i class="fa fa-pen"></i></a>
+                                                    <form action="/admin/sekolah-pk/{{ $school->id }}" method="post">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <button class="btn btn-danger ml-2" type="submit"><i
+                                                                class="fa fa-trash"></i></button>
+                                                    </form>
+                                                </div>
                                                 </td>
                                             </tr>
                                 @endforeach

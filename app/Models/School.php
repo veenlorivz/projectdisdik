@@ -21,4 +21,8 @@ class School extends Model
     public function jurusan(){
         return $this->belongsTo(Jurusan::class, "jurusan_id");
     }
+
+    public function siswa(){
+        return $this->hasMany(Siswa::class);
+    }
 }
