@@ -8,8 +8,13 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\WilayahDKIController;
 use App\Http\Controllers\DokumenController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::prefix('admin')->group(function () {
+    //dashboard
+    Route::get('dashboard', [Controller::class, 'index'])->name('dashboard.index') ;
+    
     //wilayah
     Route::get('wilayah-dki', [WilayahDKIController::class, 'index'])->name('wilayah.index');
     Route::get('wilayah-dki-create', [WilayahDKIController::class, 'create'])->name('wilayah.create');
