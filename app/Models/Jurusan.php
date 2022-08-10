@@ -9,4 +9,8 @@ class Jurusan extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function school(){
+        $this->hasMany(School::class);
+    }
 }

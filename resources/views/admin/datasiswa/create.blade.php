@@ -1,19 +1,16 @@
 @extends('main')
 
 @section('title')
-    <title>Data Industri</title>
+    <title>Data Siswa</title>
 @endsection
 
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Data siswa</h1>
+            <h1>Tambah Data siswa</h1>
         </div>
         <div class="section-body">
             <div class="card">
-                <div class="card-header">
-                    <h4>Data siswa</h4>
-                </div>
                 <div class="card-body">
                     <form action="/admin/siswa" method="post">
                         @csrf

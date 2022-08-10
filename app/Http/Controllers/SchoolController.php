@@ -7,6 +7,7 @@ use App\Models\WilayahDKI;
 use App\Models\Jurusan;
 use App\Models\TahunAkademik;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class SchoolController extends Controller
 {
@@ -17,7 +18,8 @@ class SchoolController extends Controller
      */
     public function index()
     {
-        return view('admin.datasekolah.index');
+
+        return view('admin.datasekolah.index', ["schools" => School::all()]);
     }
 
     /**
@@ -41,7 +43,23 @@ class SchoolController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'namasekolah' => "required|string",
+            'alamat' => "required|string",
+            "wilayah_dki_id" => "required|numeric|min:1",
+            "tahun_akademik_id" => "required|numeric|min:1",
+            "jurusan_id" => 'required|numeric|min:1'
+        ]);
+
+        School::create([
+            "namasekolah" => $validated["namasekolah"],
+            "alamat" => $validated["alamat"],
+            "wilayah_dki_id" => $validated["wilayah_dki_id"],
+            "tahun_akademik_id" => $validated["tahun_akademik_id"],
+            "jurusan_id" => $validated["jurusan_id"],
+        ]);
+        
+        return redirect("admin/sekolah-pk");
     }
 
     /**
