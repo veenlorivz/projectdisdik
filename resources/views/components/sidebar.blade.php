@@ -30,6 +30,11 @@
             <a href="{{ route('datadokumen.index') }}" class="nav-link"><i class="fas fa-book"></i>
                 <span>Data Dokumen</span></a>
         </li>
+
+            </ul>
+        </li>
+
+
     </ul>
 
     <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
