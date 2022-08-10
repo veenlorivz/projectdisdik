@@ -23,8 +23,8 @@
                     <h4>Data Siswa</h4>
                 </div>
                 <div class="card-body">
+                    <a href="/admin/siswa/create" class="btn btn-primary mb-3">Tambah Data Siswa</a>
                     <div class="table-responsive">
-                        <a href="/admin/siswa/create" class="btn btn-primary mb-3">Tambah Data Siswa</a>
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
