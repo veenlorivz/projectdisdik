@@ -36,6 +36,7 @@
                                             <td>{{ $i->alamat }}</td>
                                             <td>{{ $i->no_telp }}</td>
                                             <td>
+<<<<<<< HEAD
                                                 <div class="d-flex">
                                                     <a href="/admin/industri/{{ $i->id }}/edit"
                                                         class="btn btn-warning"><i class="fa fa-pen"></i></a>
@@ -46,6 +47,10 @@
                                                                 class="fa fa-trash"></i></button>
                                                     </form>
                                                 </div>
+=======
+                                                <a href="#" class="btn btn-warning"><i class="fas fa-pen"></i></a>
+                                                <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+>>>>>>> d950f584614ef25e478fcab5308a6e081badc83a
                                             </td>
                                         </tr>
                                     @endforeach
